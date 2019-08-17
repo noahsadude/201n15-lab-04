@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'futuralight';
+  src: url('futura_light_font-webfont.woff2') format('woff2'),
+       url('futura_light_font-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+header{
+  width:1200px;
+  margin: auto;
+  background-color: #888888;
+  height:150px;
+}
+
+#profile{
+  border-radius: 50%;
+  height: 150px;
+  float: left;
+}
+
+nav li {
+  display: inline-block;
+  margin-left:50px;
+  margin-top: 60px;
+  color: whitesmoke;
+  font-size: 2em;
+}
+
+nav li a{
+  color: whitesmoke;
+}
+
+nav li a:hover{
+  color: #444;
+}
+
+body{
+  font-family: 'futuralight';
+  background: whitesmoke;
+}
+
+main{
+  width: 1200px;
+  min-height: 600px;
+  margin: 30px auto;
+}
+
+main li img{
+  float:left;
+  margin-right:73.33px;
+  margin-top:30px;
+  margin-bottom:30px;
+}
+
+#last-img{
+  margin-right: 0px;
+}
+
+footer{
+  font-size: 1.5em;
+  color: whitesmoke;
+  width:1200px;
+  margin: auto;
+  clear: left;
+  height: 100px;
+  background: #444;
+}
+footer p{
+  margin: 10px 10px;
+}
+footer :first-child{
+  padding-top: 10px;
+}
