@@ -8,6 +8,8 @@ var countOfFails = 0;
 var userName;
 var checkUserName;
 var normalizeUserName;
+var numberOfQuestions;
+
 
 //question-based global variables
 var cohort = ['sian','bree','clay','james','noah','diana','leo','essan','jack','kevin','roman','brett','lena','nicole','evan'];
@@ -120,14 +122,13 @@ if(checkUserName === -1) {
   alert ('Welcome, ' + userName);
 }
 
-trueOrFalse ('Chuck Norris?', 'always' , 'never', 'you\'re the best - *around*.', 'roundhouse kick to the face!',1);
-multipleChoice ('is this a test?',testResponses,'correct','incorrect','you used up your attempts',2,2);
-guessTheNumber('time of day is it?',findCurrentHour,'blimey it\'s late it?','Nope! Guess again!',3,4);
+numberOfQuestions = trueOrFalse ('Chuck Norris?', 'always' , 'never', 'you\'re the best - *around*.', 'roundhouse kick to the face!',1);
+numberOfQuestions += multipleChoice ('is this a test?',testResponses,'correct','incorrect','you used up your attempts',2,2);
+numberOfQuestions += guessTheNumber('time of day is it?',findCurrentHour,'blimey it\'s late it?','Nope! Guess again!',3,4);
 
-
-if(countOfTrues > ){
-  alert('You passed, '+userName+' You got '+countOfTrues+' for a score of '+((countOfTrues/6)*100));
+if(countOfTrues > (numberOfQuestions/2)){
+  alert('You passed, '+userName+' You got '+countOfTrues+' for a score of '+((countOfTrues/numberOfQuestions)*100));
 } else {
-  alert('Sorry '+userName+' You got '+countOfTrues+' for a score of '+((countOfTrues/6)*100));
+  alert('Sorry '+userName+' You got '+countOfTrues+' for a score of '+((countOfTrues/numberOfQuestions)*100));
 }
 
