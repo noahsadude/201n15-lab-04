@@ -16,7 +16,7 @@ var cohort = ['sian','bree','clay','james','noah','diana','leo','essan','jack','
 var today = new Date();
 var findCurrentHour = today.getHours();
 var winePreference = ['pinot noir','zifendel','brut'];
-
+var testResponses = ['yes','maybe','perhaps','indubitably'];
 
 function findStuffInThings (variable,name){
   for(var i = 0; i < variable.length; i++) {
@@ -42,6 +42,7 @@ console.log('user inputted '+ checkIfComplete);
       alert(responseIfTrue);
       countOfTrues++;
 console.log('user input correct');
+      return 1;
     } else if(checkIfComplete === wrongAnswer){
       alert(responseIfFalse);
       countOfFalses++;
@@ -109,10 +110,6 @@ console.log('count of invalid inputs: '+countOfFails);
 }
 
 //finding the user's name
-cohort = ['sian','bree','clay','james','noah','diana','leo','essan','jack','kevin','roman','brett','lena','nicole','evan'];
-var testResponses = ['yes','maybe','perhaps','indubitably'];
-
-
 userName = prompt('Hi there! What is your name?');
 normalizeUserName = userName.toLowerCase();
 checkUserName = findStuffInThings(cohort, normalizeUserName);
@@ -122,13 +119,16 @@ if(checkUserName === -1) {
   alert ('Welcome, ' + userName);
 }
 
-numberOfQuestions = trueOrFalse ('Chuck Norris?', 'always' , 'never', 'you\'re the best - *around*.', 'roundhouse kick to the face!',1);
-numberOfQuestions += multipleChoice ('is this a test?',testResponses,'correct','incorrect','you used up your attempts',2,2);
-numberOfQuestions += guessTheNumber('time of day is it?',findCurrentHour,'blimey it\'s late it?','Nope! Guess again!',3,4);
+
+
+numberOfQuestions = trueOrFalse('Chuck Norris?', 'always' , 'never', 'you\'re the best - *around*.', 'roundhouse kick to the face!',1);
+numberOfQuestions += multipleChoice('is this a test?',testResponses,'correct','incorrect','you used up your attempts',2,2);
+numberOfQuestions += multipleChoice('what do you think my favorite wines are?',winePreference,'Correct! I like '+winePreference+' wines','Sorry, I don\'t like that one. Try again.','Sorry, you used up your answers. I like '+winePreference+' wines.',3,2);
+numberOfQuestions += guessTheNumber('time of day is it?',findCurrentHour,'blimey it\'s late it?','Nope! Guess again!',3,2);
 
 if(countOfTrues > (numberOfQuestions/2)){
-  alert('You passed, '+userName+' You got '+countOfTrues+' for a score of '+((countOfTrues/numberOfQuestions)*100));
+  alert('You passed, '+userName+' You got '+countOfTrues+' for a score of '+((countOfTrues/numberOfQuestions)*100)+'%');
 } else {
-  alert('Sorry '+userName+' You got '+countOfTrues+' for a score of '+((countOfTrues/numberOfQuestions)*100));
+  alert('Sorry '+userName+' You got '+countOfTrues+' for a score of '+((countOfTrues/numberOfQuestions)*100)+'%');
 }
 
