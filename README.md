@@ -8,5 +8,8 @@ We then built out a simple true false function `trueOrFalse()` with question inp
 
 Additionally, I built out both `multipleChoice()` and `guessTheNumber()`, both with outputs of either 1 or 0 if the user was successful or not, accordingly.
 
+Thanks to:
+[Danny Bullis](https://stackoverflow.com/questions/37077617/javascript-store-multiple-objects-in-array-and-access-their-properties-via) for helping me figure out how to store objects in arrays.
+
 
 
