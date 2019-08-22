@@ -178,13 +178,13 @@ function guessingGame(questionsAsObjects){
       multipleChoice(questionsAsObjects[i].question,questionsAsObjects[i].rightAnswer,questionsAsObjects[i].responseIfTrue,questionsAsObjects[i].responseIfFalse,questionsAsObjects[i].responseIfFail,i+1,questionsAsObjects[i].attempts);
     }
   }
+  findScore();
 }
 
-guessingGame(allQuestions);
-
+function findScore(){
 if(countOfTrues > (numberOfQuestions/2)){
   alert('You passed, '+userName+' You got '+countOfTrues+' out of '+numberOfQuestions+' for a score of '+((countOfTrues/numberOfQuestions)*100)+'%');
 } else {
   alert('Sorry '+userName+' You got '+countOfTrues+' out of '+numberOfQuestions+' for a score of '+((countOfTrues/numberOfQuestions)*100)+'%');
 }
-
+}

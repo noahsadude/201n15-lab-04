@@ -10,6 +10,7 @@ Additionally, I built out both `multipleChoice()` and `guessTheNumber()`, both w
 
 Thanks to:
 [Danny Bullis](https://stackoverflow.com/questions/37077617/javascript-store-multiple-objects-in-array-and-access-their-properties-via) for helping me figure out how to store objects in arrays.
-
+[Patrick Gillespie](http://patorjk.com/)
+for the awesome snake game!
 
 
